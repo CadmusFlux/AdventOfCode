@@ -1,4 +1,4 @@
-# Problem Statement : 
+# Problem Statement 1 : 
 
                       After saving Christmas five years in a row, you've decided to take a vacation at a nice resort on a tropical island. Surely, Christmas will go on without you.
 
@@ -38,3 +38,29 @@
               if num in list:
                 print(num,i)
                 print(num*i)
+                
+                
+    # Problem Statement  2 : 
+
+                      The Elves in accounting are thankful for your help; one of them even offers you a starfish coin they had left over from a past vacation. 
+                      They offer you a second one if you can find three numbers in your expense report that meet the same criteria.
+
+                      Using the above example again, the three entries that sum to 2020 are 979, 366, and 675. Multiplying them together produces the answer, 241861950.
+
+                      In your expense report, what is the product of the three entries that sum to 2020?
+                      
+   Input  :           Is a long list of numbers but stored without formatting hence i had to import the number into spreadsheet and then transpose paste it then download it in csv
+                      format . After that store the values in a list.
+            
+   Output :  
+                      list = [# Lot of numbers]
+
+                      for i in list:
+
+                          num = 2020 - i
+
+                          for j in list:
+                            z = num - j
+                            if z in list:
+                              print(i,j,z)
+                              print(i*j*z)
