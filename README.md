@@ -1,6 +1,6 @@
 # AdventOfCode
 
-Daily log for s0lving 2 parter problems for 25 days.
+Daily log for solving 2 parter problems for 25 days.
 
 | Day  | Puzzle 1 | Puzzle 2 |
 | :--: | :------: | :------: |
