@@ -1,6 +1,6 @@
 # AdventOfCode
 
-Just some blade sharpening if I have time
+Daily log for s0lving 2 parter problems for 25 days.
 
 | Day  | Puzzle 1 | Puzzle 2 |
 | :--: | :------: | :------: |
