@@ -5,7 +5,7 @@ Just some blade sharpening if I have time
 | Day  | Puzzle 1 | Puzzle 2 |
 | :--: | :------: | :------: |
 |  1   |   Done   |   Done   |
-|  2   |   Done   |          |
+|  2   |   Done   |   Done   |
 |  3   |          |          |
 |  4   |          |          |
 |  5   |          |          |
