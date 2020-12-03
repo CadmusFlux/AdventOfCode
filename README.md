@@ -6,7 +6,7 @@ Daily log for solving 2 parter problems for 25 days.
 | :--: | :------: | :------: |
 |  1   |   Done   |   Done   |
 |  2   |   Done   |   Done   |
-|  3   |          |          |
+|  3   |   Done   |   Done   |
 |  4   |          |          |
 |  5   |          |          |
 |  6   |          |          |
