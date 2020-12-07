@@ -107,9 +107,40 @@ Problem Statement :
                     
  Code  : 
  
-          for i in range(len(seat_id)):
-              if seat_id[i] != None and seat_id[i+1] = seat_id[i]+1:
-                pass
+          list = []
+          y = ""
+          
+          with open("input.txt","r") as file:
+          for line in file:
+              if line == "\n":
+                  list.append(y.split(","))
+                  y = ""
               else:
-                print("Your Seat number is : ", seat_id[i]+1)
+                  if len(y) == 0:
+                      y += line.strip()
+                  else:
+                      y += "," + line.strip()
+
+
+          list.append(y.split(",")) 
+          
+          count = []
+          
+          for group in list:
+            dict1 = {}
+            count1 = 0
+            for x in group[0]:
+                dict1[x] = 1
+            for person in group[1:]:
+                for question in person:
+                    if question in dict1:
+                        dict1[question] += 1
+            length = len(group)
+            for value in dict1.values():
+                if value >= length:
+                    count1 += 1
+            count.append(count1)
+            
+            sum(count)
+
                 
