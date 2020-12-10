@@ -1,0 +1,103 @@
+Problem Statement 1 :
+
+                      Run your copy of the boot code. Immediately before any instruction is executed a second time, what value is in the accumulator?
+                      
+Problem Statement 2 : 
+                  
+                      Fix the program so that it terminates normally by changing exactly one jmp (to nop) or nop (to jmp).
+                      What is the value of the accumulator after the program terminates?
+                      
+Code:
+
+                      instr = []
+                      
+                      with open("input.txt","r") as file:
+    
+                      for line in file:
+                          instr.append([line.split()[0],int(line.split()[1])])
+                          
+                      def part1(dataset1):
+
+                        accumulator = 0
+                        visited = [0]*len(dataset1)
+                        i= 0
+
+                        while i < len(dataset1):
+
+                            if visited[i] == 0:
+
+                                if dataset1[i][0] == "nop":
+                                    visited[i] = 1
+                                    i += 1
+                                elif dataset1[i][0] == "acc":
+                                    accumulator += dataset1[i][1]
+                                    visited[i] = 1
+                                    i += 1
+                                else:
+                                    visited[i] = 1
+                                    i += dataset1[i][1]
+                            else:
+                                print(accumulator)
+                                break
+                        return accumulator
+                        
+                        
+                        import copy
+                        
+                        
+                        def acc_return(dataset):
+
+                          accumulator = 0
+                          visited = [0]*len(dataset)
+                          i= 0
+                          flag = 0
+
+                          while i < len(dataset):
+
+                              if visited[i] == 0:
+
+                                  if dataset[i][0] == "nop":
+                                      visited[i] = 1
+                                      i += 1
+                                  elif dataset[i][0] == "acc":
+                                      accumulator += dataset[i][1]
+                                      visited[i] = 1
+                                      i += 1
+                                  else:
+                                      visited[i] = 1
+                                      i += dataset[i][1]
+                              else:
+                                  flag = 1
+                                  break
+                          if flag == 0:
+                              return accumulator
+                          else:
+                              return 0
+                              
+                              
+                      def part2(dataset2):
+
+                        list2 = []
+                        for i in range(len(instr)):
+                            if instr[i][0] == "jmp" or instr[i][0] == "nop":
+                                list2.append([instr[i][0],i])
+
+                        list3 = []
+                        for i in list2:
+                            status = None
+                            if i[0] == "nop":
+                                list3 = copy.deepcopy(instr)
+                                list3[i[1]][0] = "jmp"
+                                status = acc_return(list3)
+                            else:
+                                list3 = copy.deepcopy(instr)
+                                list3[i[1]][0] = "nop"
+                                status = acc_return(list3)
+
+                            if status == 0:
+                                pass
+                            else:
+                                print(status)
+                                
+                   part1(instr)
+                   part2(instr)
