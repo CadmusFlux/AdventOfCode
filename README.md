@@ -12,9 +12,9 @@ Daily log for solving 2 parter problems for 25 days.
 |  3   |   Done   |   Done   |
 |  4   |   Done   |   Done   |
 |  5   |   Done   |   Done   |
-|  6   |          |          |
-|  7   |          |          |
-|  8   |          |          |
+|  6   |   Done   |   Done   |
+|  7   |   Done   |   Done   |
+|  8   |   Done   |   Done   |
 |  9   |          |          |
 |  10  |          |          |
 |  11  |          |          |
