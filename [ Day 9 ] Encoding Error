@@ -1,0 +1,58 @@
+Problem Statement: 
+ 
+ 
+                  Find the first number in the list (after the preamble) which is not the sum of two of the 25 numbers before it.
+                  What is the first number that does not have this property?
+                  
+                  
+                  
+Code :            
+                  list = []
+                  
+                  with open("input.txt","r") as file:
+                    for line in file:
+                        list.append(int(line.strip()))
+                        
+                  def part1(dataset,bracket):
+    
+                    for k in range(len(dataset)):
+                        list1 = dataset[k:k+bracket]
+                        flag = 0
+                        for i in range(len(list1)):
+                            for j in range(len(list1)-1,i,-1):
+                                if list1[i]+list1[j] == dataset[k+bracket]:
+                                    flag = 1
+                                    break
+                            if flag == 1:
+                                break
+                        if flag == 0:
+                            return dataset[k+bracket]
+                            break
+                        flag = 0
+
+                        if (k+bracket) == len(dataset)-1:
+                            break
+                            
+                            
+                    def part2(dataset):
+
+                        for k in range(len(dataset)):
+                            for g in range(len(dataset)):
+
+                                list1 = dataset[k:g+1]
+                                if sum(list1) == 29221323:
+                                    max,min = list1[0],list1[0]
+                                    for i in list1:
+                                        if i > max:
+                                            max = i
+                                        elif i<min:
+                                            min = i
+                                        else:
+                                            pass
+
+                                    return list1,min+max
+                                    
+                                    
+                   part1(list,25)
+                   part2(list)
+
