@@ -33,8 +33,20 @@ Code :
                         if (k+bracket) == len(dataset)-1:
                             break
                             
-                            
-                    def part2(dataset):
+                part1(list,25)
+                
+                
+                
+                                                                         --- Part Two ---
+                                                                         
+                                                                         
+                                                                         
+Problem Statement  : 
+
+                     What is the encryption weakness in your XMAS-encrypted list of numbers?
+
+Code   : 
+                     def part2(dataset):
 
                         for k in range(len(dataset)):
                             for g in range(len(dataset)):
@@ -53,6 +65,5 @@ Code :
                                     return list1,min+max
                                     
                                     
-                   part1(list,25)
                    part2(list)
 
