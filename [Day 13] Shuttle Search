@@ -1,0 +1,74 @@
+# Part1 ------------------
+
+Problem Statement :
+
+                    What is the ID of the earliest bus you can take to the airport multiplied by the number of minutes you'll need to wait for that bus?
+                    
+                    
+Code :              
+
+                    multiples = []
+                    
+                    with open("input.txt") as file:
+                      for line in file:
+                          line = line.replace("\n","")
+                          if line.isdigit() != True:
+                              multiples = [int(r) for r in line.split(",") if r != "x"]
+                              
+                    num = 1000417
+                    remainder = []
+                    
+                    
+                    for i in multiples:
+                        if num % i == 0:
+                            remainder.append(0)
+                        else:
+                            y = (i * ((num//i)+1)) - num
+                            remainder.append(y)
+
+                    x = min(remainder)
+                    index = remainder.index(x)
+                    print(multiples[index]*x)
+                    
+--- Part Two ---
+
+Problem Statement : 
+
+                    What is the earliest timestamp such that all of the listed bus IDs depart at offsets matching their positions in the list?
+
+Note :          
+                    This is a valid algorithm but not optimal as  even multiple list greate rthan 5 will take a very long time as the number is in billions.
+
+Code :  
+
+                    multiple,index = [],[]
+                    
+                    with open("input.txt") as file:
+                      for line in file:
+                          line = line.replace("\n","")
+                          if line.isdigit() != True:
+                              raw = line.split(",")
+                              for r in range(len(raw)):
+                                  if raw[r] != "x":
+                                      multiple.append(int(raw[r]))
+                                      index.append(r)
+                                      
+                                      
+                    i = 0
+                    while True:
+                        flag = 0
+                        for j in range(len(multiple)):
+                            # print(i ,j,multiple[j] , index[j],i%multiple[j] , ((multiple[j] * ((i//multiple[j])+1)) - i))
+                            if j == 0 and (i%multiple[j]) == index[j]:
+                                flag = 1
+                            elif  j!= 0 and flag ==1 and ((multiple[j] * ((i//multiple[j])+1)) - i) == index[j]:
+                                flag = 1
+                            else:
+                                flag = 0
+                                break
+                        # print("------------------")
+                        if flag == 1:
+                            print(i)
+                            break
+                        flag = 0
+                        i += 1
