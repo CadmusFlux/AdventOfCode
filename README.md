@@ -18,16 +18,16 @@ Daily log for solving 2 parter problems for 25 days.
 |  9   |   Done   |   Done   |
 |  10  |          |          |
 |  11  |   Done   |   Done   |
-|  12  |          |          |
+|  12  |   Done   |   Done   |
 |  13  |   Done   |   Done   |
 |  14  |          |          |
-|  15  |          |          |
-|  16  |          |          |
+|  15  |   Done   |   Done   |
+|  16  |   Done   |   Done   |
 |  17  |          |          |
 |  18  |          |          |
 |  19  |          |          |
 |  20  |          |          |
-|  21  |          |          |
+|  21  |   Done   |   Done   |
 |  22  |          |          |
 |  23  |          |          |
 |  24  |          |          |
