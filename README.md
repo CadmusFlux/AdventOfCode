@@ -31,4 +31,4 @@ Daily log for solving 2 parter problems for 25 days.
 |  22  |          |          |
 |  23  |          |          |
 |  24  |          |          |
-|  25  |          |          |
+|  25  |   Done   |          |
